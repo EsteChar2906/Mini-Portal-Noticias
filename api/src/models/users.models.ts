@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt';
 
 //creando una interface de TS que representa un documento en mongoDB
 export interface IUsers {
+	id: string; 
 	email: string;
 	userName: string;
 	password: string;

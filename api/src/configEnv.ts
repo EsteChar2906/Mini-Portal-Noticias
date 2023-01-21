@@ -9,3 +9,6 @@ export const PASSWORD_DB = process.env.PASSWORD_DB;
 export const HOST_DB = process.env.HOST_DB;
 export const NAME_DB = process.env.NAME_DB;
 export const URL_DB = process.env.URL_DB || `mongodb+srv://${USER_DB}:${PASSWORD_DB}@${HOST_DB}/${NAME_DB}`;
+
+//jwt
+export const jwtSecret = 'claveclimanoticia';
