@@ -2,6 +2,8 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import { PORT } from './configEnv';
+import authRoute from './routes/auth.routes';
+
 //initializations
 const app = express();
 
@@ -18,6 +20,7 @@ app.use(express.json());
 //routes
 app.get("/", (req, res) => {
 	res.send(`conectado a localhos en el puerto: ${app.get('port')}`)
-})
+});
+app.use("/api", authRoute);
 
 export default app;
